@@ -141,6 +141,11 @@ app.use("/docs", swaggerUi.serve, swaggerUi.setup(openapiDocument));
 app.use((req, res) => {
   res.status(404).json({ error: "Route not found" });
 });
+app.get("/stats", (req, res) => {
+  const total = tasks.length;
+  const done = tasks.filter((t) => t.done).length;
+  res.json({ total, done, open: total - done });
+});
 
 app.listen(PORT, () => {
   console.log(`Task API running at http://localhost:${PORT}`);
