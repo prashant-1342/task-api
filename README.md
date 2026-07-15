@@ -46,8 +46,11 @@ Content-Type: application/json; charset=utf-8
 ```
 
 ## Swagger screenshot
+![Swagger UI](ab1.png)
+![Swagger UI](ab2.png)
 
 ![Swagger UI](swagger-screenshot.png)
+
 
 
 ## The mortality experiment
