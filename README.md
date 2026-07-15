@@ -47,7 +47,8 @@ Content-Type: application/json; charset=utf-8
 
 ## Swagger screenshot
 
-_Add your screenshot of `http://localhost:3000/docs` here after running the server and clicking "Try it out"._
+![Swagger UI](swagger-screenshot.png)
+
 
 ## The mortality experiment
 
