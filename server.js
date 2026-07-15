@@ -31,13 +31,11 @@ app.get("/health", (req, res) => {
 app.get("/tasks", (req, res) => {
   let result = tasks;
 
-  // Bonus: filtering with ?done=true / ?done=false
   if (req.query.done !== undefined) {
     const wantDone = req.query.done === "true";
     result = result.filter((t) => t.done === wantDone);
   }
 
-  // Bonus: search with ?search=milk
   if (req.query.search) {
     const term = req.query.search.toLowerCase();
     result = result.filter((t) => t.title.toLowerCase().includes(term));
