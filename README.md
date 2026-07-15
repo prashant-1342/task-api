@@ -51,11 +51,11 @@ Content-Type: application/json; charset=utf-8
 
 
 ## The mortality experiment
+## The mortality experiment
 
 Create a few tasks, restart the server (`Ctrl+C` then `npm start` again), then `GET /tasks`.
 
-_Add 2 sentences here about what you observed and why — this is the reason in-memory storage
-gets replaced by a real database next week._
+After restarting the server, all the tasks I had created were gone — only the original 3 seed tasks were still there. This happens because the tasks array lives in the server's RAM (memory), not on disk, so it gets completely wiped every time the Node process stops and starts fresh. This is exactly why real applications use a database: it stores data on disk so it survives restarts, which is what next week's assignment will add.
 
 ## Project structure
 
